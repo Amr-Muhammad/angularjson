@@ -1,0 +1,12 @@
+<button (click)="getData()">Click me!</button>
+
+<div class="container">
+    <div class="row g-3">
+        <div class="col-md-3" *ngFor="let card of dataArr">
+            <div>
+                <img [src]="card.image_url" alt="">
+                <h2>{{card.title.length>15?card.title.slice(0,15) + '...':card.title}}</h2>
+            </div>
+        </div>
+    </div>
+</div>
